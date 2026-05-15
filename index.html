@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>NusaPay Wallet</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+
+  <main class="phone">
+
+    <!-- LOGIN PAGE -->
+    <section class="page active" id="loginPage">
+
+      <div class="login-bg">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+      </div>
+
+      <div class="login-card">
+
+        <div class="logo-box">
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+
+        <h1>NusaPay</h1>
+        <p>Dompet digital modern untuk transaksi harian</p>
+
+        <div class="input-group">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" id="username" placeholder="Username" />
+        </div>
+
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" placeholder="Password" />
+        </div>
+
+        <button class="primary-btn" onclick="login()">
+          Masuk Sekarang
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+        <div class="demo-account">
+          <span>Akun Demo</span>
+          <p>owal / danil • password: 123</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOME PAGE -->
+    <section class="page" id="homePage">
+
+      <header class="home-header">
+
+        <div>
+          <p>Selamat datang,</p>
+          <h2 id="userName">User</h2>
+        </div>
+
+        <button class="profile-btn">
+          <i class="fa-solid fa-user"></i>
+        </button>
+
+      </header>
+
+      <section class="balance-card">
+
+        <div class="balance-top">
+          <div>
+            <p>Total Saldo</p>
+            <h1 id="balanceText">Rp 0</h1>
+          </div>
+
+          <div class="shield">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+        </div>
+
+        <div class="card-number">
+          <span>••••</span>
+          <span>••••</span>
+          <span>2026</span>
+          <span id="walletId">ID-000</span>
+        </div>
+
+      </section>
+
+      <section class="quick-action">
+
+        <button onclick="openTopup()">
+          <i class="fa-solid fa-plus"></i>
+          <span>Top Up</span>
+        </button>
+
+        <button onclick="openTransfer()">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Kirim</span>
+        </button>
+
+        <button onclick="showToast('Fitur QR demo belum aktif')">
+          <i class="fa-solid fa-qrcode"></i>
+          <span>QRIS</span>
+        </button>
+
+        <button onclick="showToast('Fitur tarik tunai demo belum aktif')">
+          <i class="fa-solid fa-money-bill-transfer"></i>
+          <span>Tarik</span>
+        </button>
+
+      </section>
+
+      <div class="section-title">
+        <h3>Layanan Favorit</h3>
+        <span>Lihat semua</span>
+      </div>
+
+      <section class="services">
+
+        <div class="service-card">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <span>Pulsa</span>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-bolt"></i>
+          <span>Listrik</span>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-wifi"></i>
+          <span>Internet</span>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-gamepad"></i>
+          <span>Games</span>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-utensils"></i>
+          <span>Makanan</span>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-motorcycle"></i>
+          <span>Ride</span>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-ticket"></i>
+          <span>Voucher</span>
+        </div>
+
+        <div class="service-card">
+          <i class="fa-solid fa-ellipsis"></i>
+          <span>Lainnya</span>
+        </div>
+
+      </section>
+
+      <section class="promo-card">
+
+        <div>
+          <span>Promo Spesial</span>
+          <h3>Cashback sampai 40%</h3>
+          <p>Untuk pembayaran makanan, pulsa, dan voucher game.</p>
+        </div>
+
+        <div class="promo-icon">
+          <i class="fa-solid fa-gift"></i>
+        </div>
+
+      </section>
+
+      <div class="section-title">
+        <h3>Aktivitas Terakhir</h3>
+        <span>Hari ini</span>
+      </div>
+
+      <section id="historyList" class="history-list"></section>
+
+    </section>
+
+
+    <!-- TOP UP PAGE -->
+    <section class="page" id="topupPage">
+
+      <header class="sub-header">
+        <button onclick="showPage('homePage')">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h2>Top Up Saldo</h2>
+      </header>
+
+      <section class="form-card">
+
+        <div class="form-icon">
+          <i class="fa-solid fa-wallet"></i>
+        </div>
+
+        <h3>Tambah Saldo</h3>
+        <p>Masukkan nominal top up yang kamu inginkan.</p>
+
+        <input type="number" id="topupAmount" placeholder="Contoh: 50000" />
+
+        <div class="amount-grid">
+          <button onclick="setTopup(50000)">Rp50K</button>
+          <button onclick="setTopup(100000)">Rp100K</button>
+          <button onclick="setTopup(250000)">Rp250K</button>
+          <button onclick="setTopup(500000)">Rp500K</button>
+        </div>
+
+        <button class="primary-btn" onclick="topup()">
+          Top Up Sekarang
+        </button>
+
+      </section>
+
+    </section>
+
+
+    <!-- TRANSFER PAGE -->
+    <section class="page" id="transferPage">
+
+      <header class="sub-header">
+        <button onclick="showPage('homePage')">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h2>Kirim Uang</h2>
+      </header>
+
+      <section class="form-card">
+
+        <div class="form-icon">
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+
+        <h3>Transfer Saldo</h3>
+        <p>Kirim uang ke teman kamu secara cepat.</p>
+
+        <input type="text" id="receiverName" placeholder="Nama penerima" />
+        <input type="number" id="transferAmount" placeholder="Nominal transfer" />
+
+        <button class="primary-btn" onclick="transfer()">
+          Kirim Sekarang
+        </button>
+
+      </section>
+
+    </section>
+
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav" id="bottomNav">
+
+      <button onclick="showPage('homePage')">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+      </button>
+
+      <button onclick="openTopup()">
+        <i class="fa-solid fa-wallet"></i>
+        <span>Top Up</span>
+      </button>
+
+      <button class="scan-btn" onclick="showToast('QRIS demo belum aktif')">
+        <i class="fa-solid fa-qrcode"></i>
+      </button>
+
+      <button onclick="openTransfer()">
+        <i class="fa-solid fa-paper-plane"></i>
+        <span>Kirim</span>
+      </button>
+
+      <button onclick="logout()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Keluar</span>
+      </button>
+
+    </nav>
+
+    <div class="toast" id="toast">Berhasil</div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
