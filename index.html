@@ -1,306 +1,919 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Document</title>
 
-  <title>NusaPay Wallet</title>
-
-  <link rel="stylesheet" href="style.css" />
-
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
 <body>
+  <!-- ================= HEADER ================= -->
+  <header class="header" id="header">
 
-  <main class="phone">
+    <div class="nav-container">
 
-    <!-- LOGIN PAGE -->
-    <section class="page active" id="loginPage">
+      <!-- LOGO / BRAND -->
+      <a href="#home" class="logo">
+        <span class="logo-icon">D</span>
+        <span class="logo-text">Daniel<span>Fendisa</span></span>
+      </a>
 
-      <div class="login-bg">
-        <div class="circle circle-1"></div>
-        <div class="circle circle-2"></div>
-      </div>
+      <!-- NAVIGATION MENU -->
+      <nav class="nav-menu" id="nav-menu">
 
-      <div class="login-card">
+        <ul class="nav-list">
 
-        <div class="logo-box">
-          <i class="fa-solid fa-wallet"></i>
-        </div>
+          <li class="nav-item">
+            <a href="#home" class="nav-link active">
+              Home
+            </a>
+          </li>
 
-        <h1>NusaPay</h1>
-        <p>Dompet digital modern untuk transaksi harian</p>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">
+              About
+            </a>
+          </li>
 
-        <div class="input-group">
-          <i class="fa-solid fa-user"></i>
-          <input type="text" id="username" placeholder="Username" />
-        </div>
+          <li class="nav-item">
+            <a href="#skills" class="nav-link">
+              Skills
+            </a>
+          </li>
 
-        <div class="input-group">
-          <i class="fa-solid fa-lock"></i>
-          <input type="password" id="password" placeholder="Password" />
-        </div>
+          <li class="nav-item">
+            <a href="#project" class="nav-link">
+              Project
+            </a>
+          </li>
 
-        <button class="primary-btn" onclick="login()">
-          Masuk Sekarang
-          <i class="fa-solid fa-arrow-right"></i>
+          <li class="nav-item">
+            <a href="#education" class="nav-link">
+              Education
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">
+              Contact
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!-- HEADER ACTION -->
+      <div class="nav-action">
+
+        <a href="#contact" class="nav-btn">
+          Hire Me
+        </a>
+
+        <!-- MOBILE MENU BUTTON -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open Menu">
+          <i class="ri-menu-3-line"></i>
         </button>
 
-        <div class="demo-account">
-          <span>Akun Demo</span>
-          <p>owal / danil • password: 123</p>
-        </div>
-
       </div>
 
-    </section>
+    </div>
 
+  </header>
 
-    <!-- HOME PAGE -->
-    <section class="page" id="homePage">
+  <!-- ================= HOME ================= -->
+  <section class="home" id="home">
 
-      <header class="home-header">
+    <div class="home-container">
 
-        <div>
-          <p>Selamat datang,</p>
-          <h2 id="userName">User</h2>
+      <!-- HOME CONTENT -->
+      <div class="home-content">
+
+        <span class="home-badge">
+          👋 Halo, Saya
+        </span>
+
+        <h1 class="home-title">
+          Daniel Fendisa
+        </h1>
+
+        <h2 class="home-subtitle">
+          Mahasiswa Teknik Informatika
+        </h2>
+
+        <p class="home-description">
+          Saya adalah mahasiswa Teknik Informatika Universitas Jabal Ghafur
+          yang memiliki ketertarikan dalam pengembangan website, desain UI/UX,
+          dan teknologi digital. Saya senang membangun tampilan web yang modern,
+          interaktif, dan mudah digunakan.
+        </p>
+
+        <!-- HOME BUTTONS -->
+        <div class="home-buttons">
+
+          <a href="#project" class="home-btn primary">
+            Lihat Project
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
+
+          <a href="#contact" class="home-btn secondary">
+            Hubungi Saya
+          </a>
+
         </div>
 
-        <button class="profile-btn">
-          <i class="fa-solid fa-user"></i>
-        </button>
+        <!-- HOME STATS -->
+        <div class="home-stats">
 
-      </header>
-
-      <section class="balance-card">
-
-        <div class="balance-top">
-          <div>
-            <p>Total Saldo</p>
-            <h1 id="balanceText">Rp 0</h1>
+          <div class="stat-box">
+            <h3>10+</h3>
+            <p>Project</p>
           </div>
 
-          <div class="shield">
-            <i class="fa-solid fa-shield-halved"></i>
+          <div class="stat-box">
+            <h3>2+</h3>
+            <p>Tahun Belajar</p>
           </div>
+
+          <div class="stat-box">
+            <h3>100%</h3>
+            <p>Semangat</p>
+          </div>
+
         </div>
 
-        <div class="card-number">
-          <span>••••</span>
-          <span>••••</span>
-          <span>2026</span>
-          <span id="walletId">ID-000</span>
-        </div>
-
-      </section>
-
-      <section class="quick-action">
-
-        <button onclick="openTopup()">
-          <i class="fa-solid fa-plus"></i>
-          <span>Top Up</span>
-        </button>
-
-        <button onclick="openTransfer()">
-          <i class="fa-solid fa-paper-plane"></i>
-          <span>Kirim</span>
-        </button>
-
-        <button onclick="showToast('Fitur QR demo belum aktif')">
-          <i class="fa-solid fa-qrcode"></i>
-          <span>QRIS</span>
-        </button>
-
-        <button onclick="showToast('Fitur tarik tunai demo belum aktif')">
-          <i class="fa-solid fa-money-bill-transfer"></i>
-          <span>Tarik</span>
-        </button>
-
-      </section>
-
-      <div class="section-title">
-        <h3>Layanan Favorit</h3>
-        <span>Lihat semua</span>
       </div>
 
-      <section class="services">
+      <!-- HOME IMAGE -->
+      <div class="home-image">
 
-        <div class="service-card">
-          <i class="fa-solid fa-mobile-screen"></i>
-          <span>Pulsa</span>
+        <div class="image-card">
+
+          <div class="image-bg"></div>
+
+          <img src="img/pp1.png" alt="Foto Daniel Fendisa">
+
+          <!-- FLOATING SKILLS -->
+          <div class="floating-skill skill-1">
+            HTML
+          </div>
+
+          <div class="floating-skill skill-2">
+            CSS
+          </div>
+
+          <div class="floating-skill skill-3">
+            JS
+          </div>
+
+          <!-- MINI CARD -->
+          <div class="mini-card">
+            <i class="ri-code-s-slash-line"></i>
+            <div>
+              <h4>Web Developer</h4>
+              <p>Creative Portfolio</p>
+            </div>
+          </div>
+
         </div>
 
-        <div class="service-card">
-          <i class="fa-solid fa-bolt"></i>
-          <span>Listrik</span>
-        </div>
-
-        <div class="service-card">
-          <i class="fa-solid fa-wifi"></i>
-          <span>Internet</span>
-        </div>
-
-        <div class="service-card">
-          <i class="fa-solid fa-gamepad"></i>
-          <span>Games</span>
-        </div>
-
-        <div class="service-card">
-          <i class="fa-solid fa-utensils"></i>
-          <span>Makanan</span>
-        </div>
-
-        <div class="service-card">
-          <i class="fa-solid fa-motorcycle"></i>
-          <span>Ride</span>
-        </div>
-
-        <div class="service-card">
-          <i class="fa-solid fa-ticket"></i>
-          <span>Voucher</span>
-        </div>
-
-        <div class="service-card">
-          <i class="fa-solid fa-ellipsis"></i>
-          <span>Lainnya</span>
-        </div>
-
-      </section>
-
-      <section class="promo-card">
-
-        <div>
-          <span>Promo Spesial</span>
-          <h3>Cashback sampai 40%</h3>
-          <p>Untuk pembayaran makanan, pulsa, dan voucher game.</p>
-        </div>
-
-        <div class="promo-icon">
-          <i class="fa-solid fa-gift"></i>
-        </div>
-
-      </section>
-
-      <div class="section-title">
-        <h3>Aktivitas Terakhir</h3>
-        <span>Hari ini</span>
       </div>
 
-      <section id="historyList" class="history-list"></section>
+    </div>
 
-    </section>
+  </section>
 
+  <!-- ================= ABOUT ================= -->
+  <section class="about" id="about">
 
-    <!-- TOP UP PAGE -->
-    <section class="page" id="topupPage">
+    <div class="about-container">
 
-      <header class="sub-header">
-        <button onclick="showPage('homePage')">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <h2>Top Up Saldo</h2>
-      </header>
+      <!-- ABOUT IMAGE -->
+      <div class="about-image">
 
-      <section class="form-card">
+        <div class="about-card">
 
-        <div class="form-icon">
-          <i class="fa-solid fa-wallet"></i>
+          <img src="img/pp2.jpeg" alt="Tentang Daniel Fendisa">
+
+          <div class="about-badge">
+            <i class="ri-graduation-cap-line"></i>
+            <span>Informatics Student</span>
+          </div>
+
         </div>
 
-        <h3>Tambah Saldo</h3>
-        <p>Masukkan nominal top up yang kamu inginkan.</p>
+      </div>
 
-        <input type="number" id="topupAmount" placeholder="Contoh: 50000" />
+      <!-- ABOUT CONTENT -->
+      <div class="about-content">
 
-        <div class="amount-grid">
-          <button onclick="setTopup(50000)">Rp50K</button>
-          <button onclick="setTopup(100000)">Rp100K</button>
-          <button onclick="setTopup(250000)">Rp250K</button>
-          <button onclick="setTopup(500000)">Rp500K</button>
+        <span class="section-badge">
+          Tentang Saya
+        </span>
+
+        <h2 class="section-title">
+          Mahasiswa Teknik Informatika yang Tertarik Pada Dunia Digital
+        </h2>
+
+        <p class="about-description">
+          Saya adalah Daniel Fendisa, mahasiswa Teknik Informatika di Universitas
+          Jabal Ghafur. Saya memiliki minat dalam pengembangan website, desain
+          antarmuka, serta teknologi digital yang dapat membantu menyelesaikan
+          masalah di kehidupan sehari-hari.
+        </p>
+
+        <p class="about-description">
+          Dalam proses belajar, saya terus mengembangkan kemampuan dalam HTML,
+          CSS, JavaScript, UI/UX, dan dasar-dasar pengembangan aplikasi. Saya
+          percaya bahwa teknologi bukan hanya tentang kode, tetapi juga tentang
+          bagaimana membuat solusi yang bermanfaat, rapi, dan mudah digunakan.
+        </p>
+
+        <!-- ABOUT INFO -->
+        <div class="about-info">
+
+          <div class="info-item">
+            <span>Nama</span>
+            <h4>Daniel Fendisa</h4>
+          </div>
+
+          <div class="info-item">
+            <span>Jurusan</span>
+            <h4>Teknik Informatika</h4>
+          </div>
+
+          <div class="info-item">
+            <span>Kampus</span>
+            <h4>Universitas Jabal Ghafur</h4>
+          </div>
+
+          <div class="info-item">
+            <span>Fokus</span>
+            <h4>Web Development</h4>
+          </div>
+
         </div>
 
-        <button class="primary-btn" onclick="topup()">
-          Top Up Sekarang
-        </button>
+        <!-- ABOUT BUTTON -->
+        <div class="about-action">
 
-      </section>
+          <a href="#contact" class="about-btn">
+            Mari Terhubung
+            <i class="ri-arrow-right-up-line"></i>
+          </a>
 
-    </section>
-
-
-    <!-- TRANSFER PAGE -->
-    <section class="page" id="transferPage">
-
-      <header class="sub-header">
-        <button onclick="showPage('homePage')">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <h2>Kirim Uang</h2>
-      </header>
-
-      <section class="form-card">
-
-        <div class="form-icon">
-          <i class="fa-solid fa-paper-plane"></i>
         </div>
 
-        <h3>Transfer Saldo</h3>
-        <p>Kirim uang ke teman kamu secara cepat.</p>
+      </div>
 
-        <input type="text" id="receiverName" placeholder="Nama penerima" />
-        <input type="number" id="transferAmount" placeholder="Nominal transfer" />
+    </div>
 
-        <button class="primary-btn" onclick="transfer()">
-          Kirim Sekarang
-        </button>
+  </section>
 
-      </section>
+  <!-- ================= SKILLS ================= -->
+  <section class="skills" id="skills">
 
-    </section>
+    <div class="skills-container">
 
+      <!-- SKILLS TOP -->
+      <div class="skills-top">
 
-    <!-- BOTTOM NAV -->
-    <nav class="bottom-nav" id="bottomNav">
+        <span class="section-badge">
+          Keahlian Saya
+        </span>
 
-      <button onclick="showPage('homePage')">
-        <i class="fa-solid fa-house"></i>
-        <span>Home</span>
-      </button>
+        <h2 class="section-title">
+          Skill yang Saya Pelajari dalam Dunia Web Development
+        </h2>
 
-      <button onclick="openTopup()">
-        <i class="fa-solid fa-wallet"></i>
-        <span>Top Up</span>
-      </button>
+        <p class="skills-description">
+          Beberapa kemampuan yang sedang saya kembangkan dalam bidang teknologi,
+          mulai dari struktur website, tampilan antarmuka, interaksi pengguna,
+          hingga dasar pengembangan aplikasi modern.
+        </p>
 
-      <button class="scan-btn" onclick="showToast('QRIS demo belum aktif')">
-        <i class="fa-solid fa-qrcode"></i>
-      </button>
+      </div>
 
-      <button onclick="openTransfer()">
-        <i class="fa-solid fa-paper-plane"></i>
-        <span>Kirim</span>
-      </button>
+      <!-- SKILLS CONTENT -->
+      <div class="skills-content">
 
-      <button onclick="logout()">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <span>Keluar</span>
-      </button>
+        <!-- SKILL CARD 1 -->
+        <div class="skill-card">
 
-    </nav>
+          <div class="skill-icon">
+            <i class="ri-html5-line"></i>
+          </div>
 
-    <div class="toast" id="toast">Berhasil</div>
+          <div class="skill-info">
+            <h3>HTML</h3>
+            <p>Membuat struktur halaman website yang rapi dan semantic.</p>
 
-  </main>
+            <div class="skill-progress">
+              <span style="width: 90%;"></span>
+            </div>
 
-  <script src="script.js"></script>
+            <h4>90%</h4>
+          </div>
+
+        </div>
+
+        <!-- SKILL CARD 2 -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+            <i class="ri-css3-line"></i>
+          </div>
+
+          <div class="skill-info">
+            <h3>CSS</h3>
+            <p>Mendesain tampilan website yang modern, responsive, dan menarik.</p>
+
+            <div class="skill-progress">
+              <span style="width: 85%;"></span>
+            </div>
+
+            <h4>85%</h4>
+          </div>
+
+        </div>
+
+        <!-- SKILL CARD 3 -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+            <i class="ri-javascript-line"></i>
+          </div>
+
+          <div class="skill-info">
+            <h3>JavaScript</h3>
+            <p>Membuat website lebih interaktif dengan logika dan animasi sederhana.</p>
+
+            <div class="skill-progress">
+              <span style="width: 75%;"></span>
+            </div>
+
+            <h4>75%</h4>
+          </div>
+
+        </div>
+
+        <!-- SKILL CARD 4 -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+            <i class="ri-layout-4-line"></i>
+          </div>
+
+          <div class="skill-info">
+            <h3>UI/UX Design</h3>
+            <p>Mendesain tampilan yang nyaman dilihat dan mudah digunakan.</p>
+
+            <div class="skill-progress">
+              <span style="width: 80%;"></span>
+            </div>
+
+            <h4>80%</h4>
+          </div>
+
+        </div>
+
+        <!-- SKILL CARD 5 -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+            <i class="ri-database-2-line"></i>
+          </div>
+
+          <div class="skill-info">
+            <h3>Database</h3>
+            <p>Memahami dasar penyimpanan data dan struktur database sederhana.</p>
+
+            <div class="skill-progress">
+              <span style="width: 70%;"></span>
+            </div>
+
+            <h4>70%</h4>
+          </div>
+
+        </div>
+
+        <!-- SKILL CARD 6 -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+            <i class="ri-git-branch-line"></i>
+          </div>
+
+          <div class="skill-info">
+            <h3>Git & GitHub</h3>
+            <p>Mengelola project, menyimpan kode, dan melakukan publikasi website.</p>
+
+            <div class="skill-progress">
+              <span style="width: 72%;"></span>
+            </div>
+
+            <h4>72%</h4>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= PROJECT ================= -->
+  <section class="project" id="project">
+
+    <div class="project-container">
+
+      <!-- PROJECT TOP -->
+      <div class="project-top">
+
+        <span class="section-badge">
+          Portfolio Project
+        </span>
+
+        <h2 class="section-title">
+          Beberapa Project yang Pernah Saya Buat
+        </h2>
+
+        <p class="project-description">
+          Berikut beberapa project website yang saya buat sebagai bagian dari proses
+          belajar dan pengembangan skill di bidang web development.
+        </p>
+
+      </div>
+
+<!-- PROJECT GRID -->
+<div class="project-grid">
+
+  <!-- PROJECT 1 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <span class="project-number">01</span>
+      <img src="img/PJ1.jpeg" alt="Website Futsal Kramat Dalam">
+    </div>
+
+    <div class="project-content">
+
+      <span class="project-category">
+        Website Sekitar
+      </span>
+
+      <h3 class="project-title">
+        Website Futsal Kramat Dalam
+      </h3>
+
+      <p class="project-text">
+        Website tersebut merupakan landing page profil untuk tempat olahraga “Futsal Kramat” yang digunakan
+        sebagai media promosi digital.
+        Website ini menampilkan informasi tentang fasilitas futsal serta
+        dokumentasi foto dan video lapangan.
+      </p>
+
+      <div class="project-tech">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+
+      <a href="https://danieldafenaza-sudo.github.io/futsal-kramat/#media" class="project-btn" target="_blank">
+        View Project
+        <i class="ri-arrow-right-up-line"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <span class="project-number">02</span>
+      <img src="img/PJ2.png" alt="Mobile App E-Wallet">
+    </div>
+
+    <div class="project-content">
+
+      <span class="project-category">
+        Mobile App E-Wallet
+      </span>
+
+      <h3 class="project-title">
+        Mobile App E-Wallet
+      </h3>
+
+      <p class="project-text">
+        Aplikasi web e-wallet atau dompet digital yang dibangun menggunakan framework Flask di Python dan dirancang
+        menyerupai tampilan aplikasi fintech modern seperti GoPay dalam versi web.
+      </p>
+
+      <div class="project-tech">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>SQLite</span>
+      </div>
+
+      <a href="https://danieldafenaza-sudo.github.io/wallet-api/" class="project-btn" target="_blank">
+        View Project
+        <i class="ri-arrow-right-up-line"></i>
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project-card">
+
+    <div class="project-image">
+      <span class="project-number">03</span>
+      <img src="img/PJ3.png" alt="Use Case Diagram Sistem Perpustakaan">
+    </div>
+
+    <div class="project-content">
+
+      <span class="project-category">
+        Use Case Diagram
+      </span>
+
+      <h3 class="project-title">
+        Use Case Diagram Sistem Perpustakaan
+      </h3>
+
+      <p class="project-text">
+        Use case diagram ini menggambarkan alur interaksi antara pengguna dengan sistem perpustakaan. Sistem ini
+        memiliki dua aktor utama, yaitu Pelajar dan Petugas/Admin. Pelajar dapat melakukan login, mencari buku,
+        meminjam buku, mengembalikan buku, serta melihat riwayat peminjaman.
+      </p>
+
+      <div class="project-tech">
+        <span>Draw.io</span>
+        <span>Use Case</span>
+        <span>Perpustakaan</span>
+      </div>
+
+<a href="usecase-perpustakaan.html" class="project-btn" target="_blank">
+  View Project
+  <i class="ri-arrow-right-up-line"></i>
+</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="education" id="education">
+
+    <div class="education-container">
+
+      <!-- EDUCATION TOP -->
+      <div class="education-top">
+
+        <span class="section-badge">
+          Pendidikan
+        </span>
+
+        <h2 class="section-title">
+          Riwayat Pendidikan dan Perjalanan Belajar
+        </h2>
+
+        <p class="education-description">
+          Perjalanan pendidikan saya menjadi dasar dalam mengembangkan kemampuan
+          di bidang teknologi, pemrograman, dan pengembangan website.
+        </p>
+
+      </div>
+
+      <!-- EDUCATION CONTENT -->
+      <div class="education-content">
+
+        <!-- EDUCATION CARD 1 -->
+        <div class="education-card">
+
+          <div class="education-icon">
+            <i class="ri-graduation-cap-line"></i>
+          </div>
+
+          <div class="education-info">
+
+            <span class="education-year">
+              Sekarang
+            </span>
+
+            <h3>
+              Universitas Jabal Ghafur
+            </h3>
+
+            <h4>
+              Teknik Informatika
+            </h4>
+
+            <p>
+              Saat ini saya menempuh pendidikan di jurusan Teknik Informatika.
+              Di sini saya mempelajari dasar pemrograman, pengembangan web,
+              database, UI/UX, serta teknologi digital modern.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- EDUCATION CARD 2 -->
+        <div class="education-card">
+
+          <div class="education-icon">
+            <i class="ri-school-line"></i>
+          </div>
+
+          <div class="education-info">
+
+            <span class="education-year">
+              Sebelumnya
+            </span>
+
+            <h3>
+              Sekolah Menengah Atas / Kejuruan
+            </h3>
+
+            <h4>
+              Pendidikan Menengah
+            </h4>
+
+            <p>
+              Pada masa pendidikan menengah, saya mulai membangun dasar pengetahuan,
+              kedisiplinan, dan ketertarikan terhadap dunia teknologi serta komputer.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- EDUCATION CARD 3 -->
+        <div class="education-card">
+
+          <div class="education-icon">
+            <i class="ri-code-box-line"></i>
+          </div>
+
+          <div class="education-info">
+
+            <span class="education-year">
+              Pengembangan Diri
+            </span>
+
+            <h3>
+              Belajar Web Development
+            </h3>
+
+            <h4>
+              HTML, CSS, JavaScript & UI/UX
+            </h4>
+
+            <p>
+              Selain belajar di kampus, saya juga mengembangkan skill secara mandiri
+              melalui latihan membuat website, eksplorasi desain, dan membangun
+              beberapa project sederhana.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+
+    <div class="contact-container">
+
+      <!-- CONTACT TOP -->
+      <div class="contact-top">
+
+        <span class="section-badge">
+          Kontak Saya
+        </span>
+
+        <h2 class="section-title">
+          Tertarik untuk Terhubung atau Bekerja Sama?
+        </h2>
+
+        <p class="contact-description">
+          Silakan hubungi saya melalui form atau kontak yang tersedia. Saya terbuka
+          untuk diskusi project, kerja sama, maupun berbagi informasi seputar dunia teknologi.
+        </p>
+
+      </div>
+
+      <!-- CONTACT CONTENT -->
+      <div class="contact-content">
+
+        <!-- CONTACT INFO -->
+        <div class="contact-info">
+
+          <div class="contact-card">
+
+            <div class="contact-icon">
+              <i class="ri-mail-line"></i>
+            </div>
+
+            <div>
+              <span>Email</span>
+              <h3>daniel.fendisa@gmail.com</h3>
+            </div>
+
+          </div>
+
+          <div class="contact-card">
+
+            <div class="contact-icon">
+              <i class="ri-phone-line"></i>
+            </div>
+
+            <div>
+              <span>Telepon</span>
+              <h3>+62 812 3456 7890</h3>
+            </div>
+
+          </div>
+
+          <div class="contact-card">
+
+            <div class="contact-icon">
+              <i class="ri-map-pin-line"></i>
+            </div>
+
+            <div>
+              <span>Lokasi</span>
+              <h3>Pidie, Aceh, Indonesia</h3>
+            </div>
+
+          </div>
+
+          <div class="contact-social">
+
+            <a href="#" aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="#" aria-label="GitHub">
+              <i class="ri-github-line"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="ri-linkedin-box-line"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+        <form class="contact-form">
+
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" placeholder="Masukkan nama kamu">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Masukkan email kamu">
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subjek</label>
+            <input type="text" id="subject" placeholder="Tulis subjek pesan">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Pesan</label>
+            <textarea id="message" rows="6" placeholder="Tulis pesan kamu di sini"></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn">
+            Kirim Pesan
+            <i class="ri-send-plane-line"></i>
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <!-- FOOTER TOP -->
+      <div class="footer-top">
+
+        <!-- BRAND -->
+        <div class="footer-brand">
+
+          <a href="#home" class="footer-logo">
+            <span>D</span>
+            Daniel Fendisa
+          </a>
+
+          <p>
+            Membangun website bukan hanya tentang menulis kode,
+            tapi tentang menciptakan pengalaman digital yang rapi,
+            berguna, dan mudah dipahami.
+          </p>
+
+        </div>
+
+        <!-- FOOTER MENU -->
+        <div class="footer-menu">
+
+          <h4>Navigasi</h4>
+
+          <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Project</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+          </div>
+
+        </div>
+
+        <!-- FOOTER INFO -->
+        <div class="footer-info">
+
+          <h4>Currently</h4>
+
+          <div class="footer-status">
+            <span></span>
+            Available for Learning & Projects
+          </div>
+
+          <p>
+            Mahasiswa Teknik Informatika
+            Universitas Jabal Ghafur.
+          </p>
+
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <i class="ri-instagram-line"></i>
+            </a>
+
+            <a href="#" aria-label="GitHub">
+              <i class="ri-github-line"></i>
+            </a>
+
+            <a href="#" aria-label="LinkedIn">
+              <i class="ri-linkedin-box-line"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- FOOTER BOTTOM -->
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 Daniel Fendisa. Built with focus, coffee, and clean code.
+        </p>
+
+        <a href="#home" class="back-top">
+          Back to Top
+          <i class="ri-arrow-up-line"></i>
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="java.js"></script>
 </body>
+
 </html>
